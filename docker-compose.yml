@@ -1,0 +1,11 @@
+services:
+  backend:
+    restart: always
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+      args:
+        - GO_VERSION=1.20.4
+        - BASE_VARIANT=alpine3.17
+    ports:
+      - "9090:8080"

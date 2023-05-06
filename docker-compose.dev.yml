@@ -1,0 +1,9 @@
+services:
+  backend:
+    restart: unless-stopped
+    build:
+      dockerfile: Dockerfile.dev
+      args:
+        - BASE_VARIANT=bullseye
+    volumes:
+      - ./:/app

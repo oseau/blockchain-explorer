@@ -1,0 +1,9 @@
+ARG BASE_VARIANT
+ARG GO_VERSION
+
+FROM golang:${GO_VERSION}-${BASE_VARIANT}
+RUN go install github.com/cosmtrek/air@latest
+
+WORKDIR /app/backend
+
+CMD ["air", "--build.cmd", "go test -cover ./... && go build -o tmp cmd/server/server.go", "--build.bin", "tmp/server"]

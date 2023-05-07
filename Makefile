@@ -1,7 +1,6 @@
 dev: ## start dev server
 	@$(MAKE) log.info MSG="================ DEV ================"
-	@docker compose -f docker-compose.yml -f docker-compose.dev.yml build backend
-	@docker compose -f docker-compose.yml -f docker-compose.dev.yml up backend
+	@docker compose -f docker-compose.yml -f docker-compose.dev.yml up --build backend
 
 .PHONY: login
 login: ## login dev docker

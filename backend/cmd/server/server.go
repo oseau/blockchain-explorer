@@ -17,14 +17,18 @@ func main() {
 	server := web.NewServer()
 	go func() {
 		defer wg.Done()
-		server.Serve()
+		if err := server.Serve(); err != nil {
+			log.Fatalf("Serve err: %v\n", err)
+		}
 	}()
 	go func() {
 		defer wg.Done()
 		sig := make(chan os.Signal, 1)
 		signal.Notify(sig, os.Interrupt, syscall.SIGTERM)
 		<-sig
-		server.Shutdown()
+		if err := server.Shutdown(); err != nil {
+			log.Printf("Shutdown err: %v\n", err)
+		}
 	}()
 	wg.Wait()
 	log.Println("bye")

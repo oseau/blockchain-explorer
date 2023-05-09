@@ -6,4 +6,4 @@ RUN go install github.com/cosmtrek/air@latest
 
 WORKDIR /app/backend
 
-CMD ["air", "--build.cmd", "go test -cover ./... && go build -o tmp cmd/server/server.go", "--build.bin", "tmp/server"]
+CMD ["air", "--build.delay", "500", "--build.cmd", "go test -cover ./... && go build -o tmp cmd/server/server.go", "--build.bin", "tmp/server"]

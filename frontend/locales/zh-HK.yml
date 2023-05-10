@@ -1,0 +1,12 @@
+button:
+  account: 賬戶
+  back: 返回
+  balance: 餘額
+  home: 首頁
+  toggle-dark: 切換深色模式
+  toggle-langs: 切換語言
+  transfer-index: 匯款紀錄
+intro:
+  name: 區塊鏈瀏覽器
+  welcome: 歡迎來到區塊鏈瀏覽器
+not-found: 未找到頁面

@@ -1,14 +1,12 @@
 button:
-  about: 关于
+  account: 账号
   back: 返回
-  go: 确定
+  balance: 余额
   home: 首页
-  toggle_dark: 切换深色模式
-  toggle_langs: 切换语言
+  toggle-dark: 切换深色模式
+  toggle-langs: 切换语言
+  transfer-index: 转账索引
 intro:
-  desc: 固执己见的 Vite 项目模板
-  dynamic-route: 动态路由演示
-  hi: 你好，{name}
-  aka: 也叫
-  whats-your-name: 输入你的名字
+  name: 区块链浏览器
+  welcome: 欢迎来到区块链浏览器
 not-found: 未找到页面

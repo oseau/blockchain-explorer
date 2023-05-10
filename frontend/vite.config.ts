@@ -101,8 +101,8 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.svg', 'safari-pinned-tab.svg'],
       manifest: {
-        name: 'Vitesse',
-        short_name: 'Vitesse',
+        name: 'Blockchain Explorer',
+        short_name: 'Blockchain Explorer',
         theme_color: '#ffffff',
         icons: [
           {

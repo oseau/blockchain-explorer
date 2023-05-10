@@ -1,12 +1,19 @@
+<script setup lang="ts">
+const { t } = useI18n()
+</script>
+
 <template>
-  <main
-    px-4 py-10
-    text="center gray-700 dark:gray-200"
-  >
-    <RouterView />
-    <TheFooter />
-    <div mx-auto mt-5 text-center text-sm opacity-50>
-      [Default Layout]
+  <div h-screen flex="~ col">
+    <TheNav />
+    <main
+      flex="~ 1"
+      items-center justify-center
+      text="center gray-700 dark:gray-200"
+    >
+      <RouterView />
+    </main>
+    <div mx-auto py-10 text-center text-sm opacity-50>
+      [{{ t('intro.name') }}]
     </div>
-  </main>
+  </div>
 </template>

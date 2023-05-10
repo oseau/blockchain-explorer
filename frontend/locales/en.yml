@@ -1,14 +1,12 @@
 button:
-  about: About
+  account: Account
   back: Back
-  go: GO
+  balance: Balance
   home: Home
-  toggle_dark: Toggle dark mode
-  toggle_langs: Change languages
+  toggle-dark: Toggle dark mode
+  toggle-langs: Change languages
+  transfer-index: Transfer Index
 intro:
-  desc: Opinionated Vite Starter Template
-  dynamic-route: Demo of dynamic route
-  hi: Hi, {name}!
-  aka: Also known as
-  whats-your-name: What's your name?
+  name: Blockchain Explorer
+  welcome: Welcome to the Blockchain Explorer!
 not-found: Not found

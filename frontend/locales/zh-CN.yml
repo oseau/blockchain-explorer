@@ -1,8 +1,13 @@
+account:
+  address: 关联地址
 button:
   account: 账号
   back: 返回
   balance: 余额
   home: 首页
+  log-in: 登陆
+  log-out: 退出
+  connect: 关联钱包
   toggle-dark: 切换深色模式
   toggle-langs: 切换语言
   transfer-index: 转账索引

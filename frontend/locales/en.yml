@@ -1,8 +1,13 @@
+account:
+  address: Connected Address
 button:
   account: Account
   back: Back
   balance: Balance
   home: Home
+  log-in: Log In
+  log-out: Log Out
+  connect: Connect MetaMask
   toggle-dark: Toggle dark mode
   toggle-langs: Change languages
   transfer-index: Transfer Index

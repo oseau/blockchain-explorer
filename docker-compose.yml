@@ -8,4 +8,4 @@ services:
         - GO_VERSION=1.20.4
         - BASE_VARIANT=alpine3.17
     ports:
-      - "9090:8080"
+      - "8181:8080"

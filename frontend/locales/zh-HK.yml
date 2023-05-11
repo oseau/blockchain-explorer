@@ -1,8 +1,13 @@
+account:
+  address: 連接地址
 button:
   account: 賬戶
   back: 返回
   balance: 餘額
   home: 首頁
+  log-in: 登入
+  log-out: 登出
+  connect: 連接錢包
   toggle-dark: 切換深色模式
   toggle-langs: 切換語言
   transfer-index: 匯款紀錄

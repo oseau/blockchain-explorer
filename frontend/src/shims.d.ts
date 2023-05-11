@@ -1,5 +1,7 @@
 declare interface Window {
   // extend the window
+  ethereum?: import('ethers').providers.ExternalProvider
+  & import('@metamask/providers').MetaMaskInpageProvider
 }
 
 // with vite-plugin-vue-markdown, markdown files can be treated as Vue components

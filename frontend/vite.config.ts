@@ -20,6 +20,19 @@ import VueMacros from 'unplugin-vue-macros/vite'
 import WebfontDownload from 'vite-plugin-webfont-dl'
 
 export default defineConfig({
+  server: {
+    proxy: {
+      '/api/': {
+        target: 'http://localhost:8181',
+        changeOrigin: true,
+      },
+      '/ws/': {
+        target: 'ws://127.0.0.1:8181',
+        changeOrigin: true,
+        ws: true,
+      },
+    },
+  },
   resolve: {
     alias: {
       '~/': `${path.resolve(__dirname, 'src')}/`,

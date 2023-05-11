@@ -1,32 +1,35 @@
 import { acceptHMRUpdate, defineStore } from 'pinia'
 
 export const useUserStore = defineStore('user', () => {
-  /**
-   * Current name of the user.
-   */
-  const savedName = ref('')
-  const previousNames = ref(new Set<string>())
+  const validUntil = useStorage('validUntil', 0)
+  const timestamp = useTimestamp()
+  const isLogIn = computed(() => (timestamp.value / 1000) < validUntil.value)
+  const { locale } = useI18n()
 
-  const usedNames = computed(() => Array.from(previousNames.value))
-  const otherNames = computed(() => usedNames.value.filter(name => name !== savedName.value))
-
-  /**
-   * Changes the current name of the user and saves the one that was used
-   * before.
-   *
-   * @param name - new name to set
-   */
-  function setNewName(name: string) {
-    if (savedName.value)
-      previousNames.value.add(savedName.value)
-
-    savedName.value = name
+  const { address, getSignature } = $(useWallet())
+  const getNonce = async () => {
+    if (!address)
+      return ''
+    const { data } = await useFetch(`/api/nonce?address=${address}&lang=${locale}`)
+      .get()
+      .json()
+    return data.value.nonce
+  }
+  const logIn = async () => {
+    const nonce = await getNonce()
+    const signature = await getSignature(nonce)
+    if (!signature)
+      return false
+    const { statusCode, data } = await useFetch(`/api/login?address=${address}`)
+      .post({ signature })
+      .json()
+    if (statusCode.value === 200)
+      validUntil.value = data.value.validUntil
   }
 
   return {
-    setNewName,
-    otherNames,
-    savedName,
+    isLogIn,
+    logIn,
   }
 })
 

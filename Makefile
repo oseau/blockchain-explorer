@@ -2,6 +2,9 @@ dev: ## start dev server
 	@$(MAKE) log.info MSG="================ DEV ================"
 	@docker compose -f docker-compose.yml -f docker-compose.dev.yml up --build backend
 
+dev-frontend: ## start frontend dev server
+	@cd frontend && pnpm dev
+
 .PHONY: login
 login: ## login dev docker
 	@$(MAKE) log.info MSG="================ DEV ================"

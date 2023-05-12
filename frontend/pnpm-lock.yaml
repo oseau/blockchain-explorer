@@ -4,6 +4,9 @@ dependencies:
   '@ethersproject/providers':
     specifier: ^5.7.2
     version: 5.7.2
+  '@ethersproject/units':
+    specifier: ^5.7.0
+    version: 5.7.0
   '@unocss/reset':
     specifier: ^0.51.12
     version: 0.51.12
@@ -1990,6 +1993,14 @@ packages:
       '@ethersproject/properties': 5.7.0
       '@ethersproject/rlp': 5.7.0
       '@ethersproject/signing-key': 5.7.0
+    dev: false
+
+  /@ethersproject/units@5.7.0:
+    resolution: {integrity: sha512-pD3xLMy3SJu9kG5xDGI7+xhTEmGXlEqXU4OfNapmfnxLVY4EMSSRp7j1k7eezutBPH7RBN/7QPnwR7hzNlEFeg==}
+    dependencies:
+      '@ethersproject/bignumber': 5.7.0
+      '@ethersproject/constants': 5.7.0
+      '@ethersproject/logger': 5.7.0
     dev: false
 
   /@ethersproject/web@5.7.1:

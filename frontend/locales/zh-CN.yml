@@ -1,9 +1,20 @@
 account:
+  title: 钱包
   address: 关联地址
+balance:
+  title: 余额
+  input-address-to-check: 输入钱包地址
+  table:
+    title: 近期余额变动
+    current: 当前余额
+    sub-title: 仅展示一周内的余额变动，最多100条。
+    block-number: 区块
+    balance: 余额
 button:
   account: 账号
   back: 返回
   balance: 余额
+  check-balance: 查询余额
   home: 首页
   log-in: 登陆
   log-out: 退出

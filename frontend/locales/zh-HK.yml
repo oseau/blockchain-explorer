@@ -1,9 +1,20 @@
 account:
+  title: 賬戶
   address: 連接地址
+balance:
+  title: 餘額
+  input-address-to-check: 輸入地址
+  table:
+    title: 最近餘額變動
+    current: 現有餘額
+    sub-title: 只顯示7天內的記錄，限制為100條。
+    block-number: 區塊
+    balance: 餘額
 button:
   account: 賬戶
   back: 返回
   balance: 餘額
+  check-balance: 查詢餘額
   home: 首頁
   log-in: 登入
   log-out: 登出

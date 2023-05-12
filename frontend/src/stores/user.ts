@@ -10,7 +10,7 @@ export const useUserStore = defineStore('user', () => {
   const getNonce = async () => {
     if (!address)
       return ''
-    const { data } = await useFetch(`/api/nonce?address=${address}&lang=${locale}`)
+    const { data } = await useFetch(`/api/nonce?address=${address}&lang=${locale.value}`)
       .get()
       .json()
     return data.value.nonce
@@ -26,10 +26,18 @@ export const useUserStore = defineStore('user', () => {
     if (statusCode.value === 200)
       validUntil.value = data.value.validUntil
   }
+  const logOut = async () => {
+    const { statusCode } = await useFetch(`/api/logout?address=${address}`)
+      .post()
+      .json()
+    if (statusCode.value === 200)
+      validUntil.value = -1
+  }
 
   return {
     isLogIn,
     logIn,
+    logOut,
   }
 })
 

@@ -23,6 +23,26 @@ Your authentication status will reset after 24 hours.
 
 To stop hackers from using your identity, here's a one time unique message they can't guess:
 %v`,
+		"zh-CN": `欢迎使用区块链浏览器！
+
+签名此消息以证明您拥有该钱包，我们将为您进行登录操作。
+
+此请求不会触发任何区块链交易或产生任何费用。
+
+您的身份验证状态将在 24 小时后重置。
+
+为防止黑客盗用您的身份，以下是一条一次性的登陆信息：
+%v`,
+		"zh-HK": `歡迎使用區塊鏈瀏覽器！
+
+簽名此消息以證明您擁有此錢包，我們將為您登錄。
+
+此請求不會觸發任何區塊鏈交易或產生任何費用。
+
+您的身份驗證狀態將在 24 小時後重置。
+
+為了阻止黑客使用您的身份，這裡有一條他們無法猜到的一次性消息：
+%v`,
 	}
 )
 

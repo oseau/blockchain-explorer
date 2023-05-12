@@ -1,9 +1,20 @@
 account:
+  title: Account
   address: Connected Address
+balance:
+  title: Balance
+  input-address-to-check: Input Address
+  table:
+    title: Recent Balance Changes
+    current: Current Balance
+    sub-title: Only 7 days of records shown, limiting to 100.
+    block-number: Block Number
+    balance: Balance
 button:
   account: Account
   back: Back
   balance: Balance
+  check-balance: Check Balance
   home: Home
   log-in: Log In
   log-out: Log Out

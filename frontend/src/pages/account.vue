@@ -9,6 +9,7 @@ async function clickLogIn() {
   await userStore.logIn()
 }
 async function clickLogOut() {
+  await userStore.logOut()
 }
 onMounted(async () => {
   await setupWallet()
@@ -16,6 +17,9 @@ onMounted(async () => {
 </script>
 
 <template>
+  <p text-3xl>
+    {{ t('account.title') }}
+  </p>
   <div v-if="!hasMetamask">
     <span>{{ t('account.need-metamask') }}</span>
   </div>
@@ -25,8 +29,8 @@ onMounted(async () => {
     </p>
     <div v-if="userStore.isLogIn">
       <button
-        w-full rounded bg-gray-300 px-4 py-2 font-bold text-gray-800
-        hover="bg-gray-400"
+        w-full rounded bg-pink-300 px-4 py-2 font-bold text-gray-800
+        hover="bg-pink-400"
         @click="clickLogOut"
       >
         {{ t('button.log-out') }}

@@ -27,8 +27,7 @@ export default defineConfig({
         changeOrigin: true,
       },
       '/ws/': {
-        target: 'ws://127.0.0.1:8181',
-        changeOrigin: true,
+        target: 'ws://localhost:8181',
         ws: true,
       },
     },

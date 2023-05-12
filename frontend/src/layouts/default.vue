@@ -6,7 +6,7 @@ const { t } = useI18n()
   <div h-screen flex="~ col">
     <TheNav />
     <main
-      flex="~ 1"
+      flex="~ col 1"
       items-center justify-center
       text="center gray-700 dark:gray-200"
     >

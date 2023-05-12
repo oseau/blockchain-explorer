@@ -10,7 +10,7 @@ run `make` to see available commands.
 make login
 go run -mod=mod entgo.io/ent/cmd/ent new Balance # if adding new table 'balance'
 # edit backend/ent/schema/balance.go
-go generate ./ent
+go run -mod=mod entgo.io/ent/cmd/ent generate --feature sql/upsert ./ent/schema
 
 go run -mod=mod entgo.io/ent/cmd/ent describe ./ent/schema # show table
 ```
